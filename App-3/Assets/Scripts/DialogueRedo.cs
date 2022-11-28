@@ -51,7 +51,7 @@ public class DialogueRedo : MonoBehaviour
     public void NextSentence()
     {
         
-        if(gameObject.CompareTag("narration") && index == 0)
+        if(gameObject.CompareTag("narration") || gameObject.CompareTag("prologue2") && index == 0)
         {
             if(cam2 != null)
             {
@@ -66,6 +66,10 @@ public class DialogueRedo : MonoBehaviour
         if (gameObject.CompareTag("narration") && index == 13)
         {
             SceneManager.LoadScene("Prologue2");
+        }
+        if(gameObject.CompareTag("prologue2") && index == 8)
+        {
+            SceneManager.LoadScene("HubWorld");
         }
             continueButton.SetActive(false);
         if (index < sentences.Length - 1)

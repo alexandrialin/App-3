@@ -18,6 +18,7 @@ public class HumanP1 : MonoBehaviour
     public float cooldown = 0;
     public float lag = 0;
 
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -114,14 +115,27 @@ public class HumanP1 : MonoBehaviour
 
                 lag = 0.5f;
 
+            }
+            if (Input.GetMouseButtonDown(1) && cooldown <= 0f)
+            {
+                anim.SetInteger("fight", 2);
 
+                cooldown = 10f;
 
             }
             if (lag > 0)
             {
                 lag -= Time.deltaTime;
             }
+            if (cooldown > 0)
+            {
+                cooldown -= Time.deltaTime;
+            }
             if (Input.GetMouseButtonUp(0))
+            {
+                anim.SetInteger("fight", 0);
+            }
+            if (Input.GetMouseButtonUp(1))
             {
                 anim.SetInteger("fight", 0);
             }

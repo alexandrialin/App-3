@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - narration
+  - prologue2
   layers:
   - Default
   - TransparentFX

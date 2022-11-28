@@ -22,8 +22,11 @@ public class AbilityShooting : MonoBehaviour
     private float hSliderValue = 0.1f;
     private float fireCountdown = 0f;
     public float lag = 0;
+    public float cooldown = 0;
     //Double-click protection
     private float buttonSaver = 0f;
+    public GameObject ability;
+    public GameObject ult;
 
     //For Camera shake 
     //public Animation camAnim;
@@ -42,16 +45,15 @@ public class AbilityShooting : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && lag <= 0f)
         {
             // camAnim.Play(camAnim.clip.name);
-            Instantiate(Prefabs[Prefab], FirePoint.transform.position, FirePoint.transform.rotation);
+            Instantiate(ability, FirePoint.transform.position, FirePoint.transform.rotation);
             lag = 0.5f;
         }
 
         //Fast shooting
-        if (Input.GetMouseButton(1) && fireCountdown <= 0f)
+        if (Input.GetMouseButton(1) && cooldown <= 0f)
         {
-            Instantiate(Prefabs[Prefab], FirePoint.transform.position, FirePoint.transform.rotation);
-            fireCountdown = 0;
-            fireCountdown += hSliderValue;
+            Instantiate(ult, FirePoint.transform.position, FirePoint.transform.rotation);
+            cooldown = 10f;
         }
         fireCountdown -= Time.deltaTime;
 
@@ -60,6 +62,10 @@ public class AbilityShooting : MonoBehaviour
         if (lag > 0)
         {
             lag -= Time.deltaTime;
+        }
+        if (cooldown > 0)
+        {
+            cooldown -= Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.Alpha1))
         {
