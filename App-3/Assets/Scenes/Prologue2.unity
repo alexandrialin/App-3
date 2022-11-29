@@ -935,6 +935,9 @@ MonoBehaviour:
   - {fileID: 1580133494715678, guid: cfc911e7da8eb62499dff1c810e59571, type: 3}
   - {fileID: 1473103337094032, guid: c7abcdbfc011815408fe700b0f70bebe, type: 3}
   lag: 0
+  cooldown: 0
+  ability: {fileID: 0}
+  ult: {fileID: 0}
 --- !u!1 &645449986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,6 +1465,9 @@ MonoBehaviour:
   - {fileID: 1580133494715678, guid: cfc911e7da8eb62499dff1c810e59571, type: 3}
   - {fileID: 1473103337094032, guid: c7abcdbfc011815408fe700b0f70bebe, type: 3}
   lag: 0
+  cooldown: 0
+  ability: {fileID: 0}
+  ult: {fileID: 0}
 --- !u!1 &959227924
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +1724,9 @@ MonoBehaviour:
   - {fileID: 1580133494715678, guid: cfc911e7da8eb62499dff1c810e59571, type: 3}
   - {fileID: 1473103337094032, guid: c7abcdbfc011815408fe700b0f70bebe, type: 3}
   lag: 0
+  cooldown: 0
+  ability: {fileID: 0}
+  ult: {fileID: 0}
 --- !u!1 &1312242996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2113,7 +2122,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1584678813826749022, guid: 4864cf50887989349bd231f17d4caa12, type: 3}
       propertyPath: sentences.Array.data[1]
-      value: 'You: Wow! How did my outfit and hair colour change?'
+      value: 'You: Wow! How did my outfit and hair colour change? And how did I transport
+        here?'
       objectReference: {fileID: 0}
     - target: {fileID: 1584678813826749022, guid: 4864cf50887989349bd231f17d4caa12, type: 3}
       propertyPath: sentences.Array.data[2]
@@ -2238,6 +2248,9 @@ MonoBehaviour:
   - {fileID: 1580133494715678, guid: cfc911e7da8eb62499dff1c810e59571, type: 3}
   - {fileID: 1473103337094032, guid: c7abcdbfc011815408fe700b0f70bebe, type: 3}
   lag: 0
+  cooldown: 0
+  ability: {fileID: 0}
+  ult: {fileID: 0}
 --- !u!1 &1833190506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 54193f80bb22fe54aa721b4beb81be03, type: 3}

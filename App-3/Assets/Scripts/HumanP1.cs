@@ -130,6 +130,11 @@ public class HumanP1 : MonoBehaviour
             if (cooldown > 0)
             {
                 cooldown -= Time.deltaTime;
+                ultActive = false;
+            }
+            else
+            {
+                ultActive = true;
             }
             if (Input.GetMouseButtonUp(0))
             {

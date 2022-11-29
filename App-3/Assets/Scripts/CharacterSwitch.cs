@@ -51,8 +51,8 @@ public class CharacterSwitch : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha4))
         {
             green.transform.position = coordinates1;
-            attackDistance = 4;
-            ultDistance = 10;
+            attackDistance = 2;
+            ultDistance = 8;
             target = green;
             targetName = "green";
             
@@ -74,8 +74,8 @@ public class CharacterSwitch : MonoBehaviour
 
             target = teal;
             targetName = "teal";
-            attackDistance = 15;
-            ultDistance = 10;
+            attackDistance = 5;
+            ultDistance = 8;
             green.SetActive(false);
         
             teal.SetActive(true);
@@ -92,8 +92,8 @@ public class CharacterSwitch : MonoBehaviour
          
             target = orange;
             targetName = "orange";
-            attackDistance = 15;
-            ultDistance = 10;
+            attackDistance = 2;
+            ultDistance = 8;
 
             green.SetActive(false);
    

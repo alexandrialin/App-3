@@ -10,7 +10,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 6
     m_ConditionEvent: fight
-    m_EventTreshold: 0
+    m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1419746653199013342}
   m_Solo: 0
@@ -267,7 +267,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 35d95060468d68a439fbedf9a573f276, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: cbdd8dcfdfc1707458d63b8e3209796e, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
