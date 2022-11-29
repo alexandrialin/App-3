@@ -49,7 +49,7 @@ public class TorchLight : MonoBehaviour
 
     public void TorchLit(string mcType)
     {
-        if (Mathf.Abs(distance) < 3)
+        if (Mathf.Abs(distance) < 4)
         {
             if (mcType == "orange")
             {

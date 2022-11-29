@@ -11,7 +11,8 @@ public class GameProgression : MonoBehaviour
     public static bool iceMelt = false;
     public GameObject enemies;
     public GameObject key;
-    public GameObject chest;  
+    public GameObject chest;
+    public GameObject complete;
    
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,8 @@ public class GameProgression : MonoBehaviour
         if (hasKey && hasChest && iceMelt)
         {
             chest.SetActive(false);
+            complete.SetActive(true);
+
         }
         if (numTorches == 3)
         {
