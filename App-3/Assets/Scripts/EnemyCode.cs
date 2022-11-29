@@ -121,6 +121,7 @@ public class EnemyCode : MonoBehaviour
             alive = false;
 
 
+
         }
         if (deathTime > 0 && alive == false)
         {
@@ -128,27 +129,31 @@ public class EnemyCode : MonoBehaviour
         }
         else if(deathTime <= 0)
         {
+            if (gameObject.CompareTag("3fires"))
+            {
+                GameProgression.fireballs++;
+            }
             Destroy(gameObject);
         }
 
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (cs.targetName == "green")
         {
             player = green;
             GetPlayerTransform();
         }
-        if (Input.GetKey(KeyCode.Alpha2))
+        if (cs.targetName == "blue")
         {
-            player = teal;
+            player = blue;
             GetPlayerTransform();
         }
-        if (Input.GetKey(KeyCode.Alpha3))
+        if (cs.targetName == "orange")
         {
             player = orange;
             GetPlayerTransform();
         }
-        if (Input.GetKey(KeyCode.Alpha4))
+        if (cs.targetName == "teal")
         {
-            player = blue;
+            player = teal;
             GetPlayerTransform();
         }
 
@@ -221,17 +226,17 @@ public class EnemyCode : MonoBehaviour
             {
                 if (mcType == "green" || enemyType == "green")
                 {
-                    dmg = Random.Range(30, 40);
+                    dmg = Random.Range(20, 30);
                 }
                 else if (mcType == "blue")
                 {
                     if (enemyType == "orange")
                     {
-                        dmg = Random.Range(20, 30);
+                        dmg = Random.Range(10, 20);
                     }
                     if (enemyType == "teal")
                     {
-                        dmg = Random.Range(40, 50);
+                        dmg = Random.Range(30, 40);
                     }
                     if (enemyType == "blue")
                     {
@@ -242,11 +247,11 @@ public class EnemyCode : MonoBehaviour
                 {
                     if (enemyType == "blue")
                     {
-                        dmg = Random.Range(40, 50);
+                        dmg = Random.Range(30, 40);
                     }
                     if (enemyType == "teal")
                     {
-                        dmg = Random.Range(20, 30);
+                        dmg = Random.Range(10, 20);
                     }
                     if (enemyType == "orange")
                     {
@@ -257,11 +262,11 @@ public class EnemyCode : MonoBehaviour
                 {
                     if (enemyType == "blue")
                     {
-                        dmg = Random.Range(20, 30);
+                        dmg = Random.Range(10, 20);
                     }
                     if (enemyType == "orange")
                     {
-                        dmg = Random.Range(40, 50);
+                        dmg = Random.Range(30, 40);
                     }
                     if (enemyType == "teal")
                     {

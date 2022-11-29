@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TorchLight : MonoBehaviour
+public class IceMelt : MonoBehaviour
 {
     public float cooldown = 0;
     public float lag = 0;
@@ -33,12 +33,12 @@ public class TorchLight : MonoBehaviour
         distance = Vector3.Distance(playerTransform.position, transform.position);
         if (Input.GetMouseButton(0) && lag <= 0f)
         {
-            TorchLit(cs.targetName);
+            IceMelted(cs.targetName, 1);
             lag = 0.5f;
         }
         if (Input.GetMouseButton(1) && HumanP1.ultActive == true)
         {
-            TorchLit(cs.targetName);
+            IceMelted(cs.targetName, 2);
         }
         if (lag > 0)
         {
@@ -47,17 +47,25 @@ public class TorchLight : MonoBehaviour
 
     }
 
-    public void TorchLit(string mcType)
+    public void IceMelted(string mcType, int skill)
     {
-        if (Mathf.Abs(distance) < 3)
+        if (Mathf.Abs(distance) < 5 && skill == 1 )
         {
             if (mcType == "orange")
             {
-                GameProgression.numTorches++;
+                GameProgression.iceMelt = true;
+                gameObject.SetActive(false);
+            }
+
+        }
+        if (Mathf.Abs(distance) < 8 && skill == 2)
+        {
+            if (mcType == "orange")
+            {
+                GameProgression.iceMelt = true;
                 gameObject.SetActive(false);
             }
 
         }
     }
-
 }

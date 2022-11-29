@@ -6,6 +6,10 @@ TagManager:
   tags:
   - narration
   - prologue2
+  - 3fires
+  - key
+  - chest
+  - fire
   layers:
   - Default
   - TransparentFX
