@@ -11,6 +11,13 @@ TagManager:
   - chest
   - fire
   - hub
+  - body
+  - 4birds
+  - earthOrb
+  - plant
+  - earth
+  - ice
+  - water
   layers:
   - Default
   - TransparentFX

@@ -133,6 +133,10 @@ public class EnemyCode : MonoBehaviour
             {
                 GameProgression.fireballs++;
             }
+            if(gameObject.CompareTag("body"))
+            {
+                EarthProgression.birdsKilled++;
+            }
             Destroy(gameObject);
         }
 

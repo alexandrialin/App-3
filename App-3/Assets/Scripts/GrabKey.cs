@@ -29,6 +29,7 @@ public class GrabKey : MonoBehaviour
     void Start()
     {
         GetPlayerTransform();
+
     }
 
     // Update is called once per frame
@@ -57,6 +58,24 @@ public class GrabKey : MonoBehaviour
                         getKeyTimer = 2f;
                     }
 
+                }
+
+                if(gameObject.CompareTag("plant"))
+                {
+                    EarthProgression.hasPlant = true;
+                    gameObject.SetActive(false);
+                }
+                if(gameObject.CompareTag("earthOrb"))
+                {
+                    if(EarthProgression.hasPlant)
+                    {
+                        EarthProgression.hasOrb = true;
+                    }
+                    else
+                    {
+                        getKey.SetActive(true);
+                        getKeyTimer = 2f;
+                    }
                 }
 
 

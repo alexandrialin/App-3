@@ -43,6 +43,18 @@ public class Teleport : MonoBehaviour
                 {
                     SceneManager.LoadScene("FireLevel");
                 }
+                if (gameObject.CompareTag("earth"))
+                {
+                    SceneManager.LoadScene("EarthLevel");
+                }
+                if (gameObject.CompareTag("ice"))
+                {
+                    SceneManager.LoadScene("IceLevel");
+                }
+                if (gameObject.CompareTag("water"))
+                {
+                    SceneManager.LoadScene("WaterLevel");
+                }
             }
         }
         else

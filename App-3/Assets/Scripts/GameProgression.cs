@@ -13,6 +13,11 @@ public class GameProgression : MonoBehaviour
     public GameObject key;
     public GameObject chest;
     public GameObject complete;
+
+    public static bool waterComplete = false;
+    public static bool iceComplete = false;
+    public static bool fireComplete = false;
+    public static bool earthComplete = false;
    
     // Start is called before the first frame update
     void Start()
