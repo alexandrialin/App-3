@@ -18,6 +18,12 @@ TagManager:
   - earth
   - ice
   - water
+  - boss
+  - Animal
+  - hit
+  - cutscene
+  - end
+  - music
   layers:
   - Default
   - TransparentFX

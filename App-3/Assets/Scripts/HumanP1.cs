@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class HumanP1 : MonoBehaviour
 {
     float speed = 6f;
@@ -17,6 +17,7 @@ public class HumanP1 : MonoBehaviour
     public GameObject FirePoint;
     public float cooldown = 0;
     public float lag = 0;
+    public Text cdText;
 
 
     void Start()
@@ -129,12 +130,15 @@ public class HumanP1 : MonoBehaviour
             }
             if (cooldown > 0)
             {
+
                 cooldown -= Time.deltaTime;
+                cdText.text = cooldown + "";
                 ultActive = false;
             }
             else
             {
                 ultActive = true;
+                cdText.text = "RC";
             }
             if (Input.GetMouseButtonUp(0))
             {

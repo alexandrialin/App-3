@@ -87,6 +87,7 @@ public class Shopping : MonoBehaviour
         if(Inventory.money >= 100)
         {
             OverallHP.hp += 50;
+            OverallHP.full = OverallHP.hp;
             Inventory.money -= 100;
         }
         

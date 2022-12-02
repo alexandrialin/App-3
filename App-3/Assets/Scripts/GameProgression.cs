@@ -25,8 +25,33 @@ public class GameProgression : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void ResetFire()
+    {
+        hasKey = false;
+        hasChest = false;
+        numTorches = 0;
+        fireballs = 0;
+        iceMelt = false;
+    }
+
+    public static void ResetEarth()
+    {
+        EarthProgression.birdsKilled = 0;
+        EarthProgression.plantWatered = false;
+        EarthProgression.hasPlant = false;
+        EarthProgression.hasOrb = false;
+    }
+    public static void ResetStats()
+    {
+        Inventory.ResetStats();
+        ResetFire();
+        ResetEarth();
+        OverallHP.hp = 200;
+        OverallHP.full = 200;
+
+    }
+        // Update is called once per frame
+        void Update()
     {
         if (hasKey && hasChest && iceMelt)
         {

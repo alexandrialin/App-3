@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: af02882a9c6a3424688e9ee9e5f9d82b
+  - enabled: 1
     path: Assets/Scenes/Prologue.unity
     guid: 0fff7da5f935b4d4785109b29cf73e57
   - enabled: 1
@@ -26,4 +29,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WaterLevel.unity
     guid: 3167339ab46a0e7468db2c682912f70c
+  - enabled: 1
+    path: Assets/Scenes/BossLevel.unity
+    guid: 86de61fb07fc13c4487ec7b303b299b9
+  - enabled: 1
+    path: Assets/Scenes/BossLevel2.unity
+    guid: a46f393abadaff8409671e0dc390c7bf
+  - enabled: 1
+    path: Assets/Scenes/BossLevel3.unity
+    guid: 1ca6f99fb550a0e44b2d124d95ede9e1
+  - enabled: 1
+    path: Assets/Scenes/BossLevel4.unity
+    guid: f381317612ef6094fba2dd17873254a8
+  - enabled: 1
+    path: Assets/Scenes/BossLevel5.unity
+    guid: 4c706c9e2d8264f4fb2ec13d2bc74e4e
+  - enabled: 1
+    path: Assets/Scenes/BossLevel6.unity
+    guid: bf9b8309f8adc414bb1a71eb9974e874
   m_configObjects: {}

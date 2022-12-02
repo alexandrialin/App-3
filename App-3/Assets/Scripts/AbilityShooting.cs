@@ -27,6 +27,7 @@ public class AbilityShooting : MonoBehaviour
     private float buttonSaver = 0f;
     public GameObject ability;
     public GameObject ult;
+    public GameObject ultSound;
 
     //For Camera shake 
     //public Animation camAnim;
@@ -49,10 +50,11 @@ public class AbilityShooting : MonoBehaviour
             lag = 0.5f;
         }
 
-        //Fast shooting
+        //Ult shooting
         if (Input.GetMouseButton(1) && cooldown <= 0f)
         {
             Instantiate(ult, FirePoint.transform.position, FirePoint.transform.rotation);
+            Instantiate(ultSound);
             cooldown = 10f;
         }
         fireCountdown -= Time.deltaTime;

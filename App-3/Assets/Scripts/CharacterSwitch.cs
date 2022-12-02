@@ -19,8 +19,9 @@ public class CharacterSwitch : MonoBehaviour
     public Vector3 coordinates1;
 
     public GameObject pauseMenu;
+    GameObject newPause;
     public bool paused = false;
-
+    public float pauseTime = 0f;
     public CamController cc;
 
 
@@ -39,20 +40,31 @@ public class CharacterSwitch : MonoBehaviour
     }
     void Update()
     {
+        if(pauseTime > 0)
+        {
+            pauseTime -= Time.deltaTime;;
+        }
         coordinates1 = target.transform.position;
 
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Escape) && pauseTime <= 0 && paused == false)
         {
 
-            pauseMenu.SetActive(true);
+            newPause = Instantiate(pauseMenu);
+            pauseTime = 1f;
+            paused = true;
 
         }
+        if (Input.GetKey(KeyCode.Escape) && pauseTime <= 0 && paused == true)
+        {
+            Destroy(newPause);
+            paused = false;
+        }
 
-        if (Input.GetKey(KeyCode.Alpha4))
+            if (Input.GetKey(KeyCode.Alpha4))
         {
             green.transform.position = coordinates1;
-            attackDistance = 2;
-            ultDistance = 8;
+            attackDistance = 3;
+            ultDistance = 12;
             target = green;
             targetName = "green";
             
@@ -74,8 +86,8 @@ public class CharacterSwitch : MonoBehaviour
 
             target = teal;
             targetName = "teal";
-            attackDistance = 5;
-            ultDistance = 8;
+            attackDistance = 8;
+            ultDistance = 12;
             green.SetActive(false);
         
             teal.SetActive(true);
@@ -92,8 +104,8 @@ public class CharacterSwitch : MonoBehaviour
          
             target = orange;
             targetName = "orange";
-            attackDistance = 2;
-            ultDistance = 8;
+            attackDistance = 3;
+            ultDistance = 12;
 
             green.SetActive(false);
    
@@ -111,8 +123,8 @@ public class CharacterSwitch : MonoBehaviour
  
             target = blue;
             targetName = "blue";
-            attackDistance = 4;
-            ultDistance = 10;
+            attackDistance = 8;
+            ultDistance = 12;
             green.SetActive(false);
  
             teal.SetActive(false);

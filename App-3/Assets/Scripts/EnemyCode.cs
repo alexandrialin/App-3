@@ -51,7 +51,7 @@ public class EnemyCode : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(playerTransform.position, transform.position);
-        if (Mathf.Abs(distance) <= attackDistance)
+        if (Mathf.Abs(distance) <= attackDistance && anim.GetInteger("attack") != 3)
         {
             if (Mathf.Abs(distance) >= bufferDistance)
             {

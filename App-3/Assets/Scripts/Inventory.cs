@@ -8,13 +8,17 @@ public class Inventory : MonoBehaviour
     public static int money = 0;
     public static bool hasFire;
     public static bool hasIce;
-    public static bool hasWater;
+    public static bool hasWater; 
     public static bool hasEarth;
 
     // Start is called before the first frame update
-    void Start()
+    public static void ResetStats()
     {
-        
+        money = 0;
+        hasFire = false;
+        hasIce = false;
+        hasWater = false;
+        hasEarth = false;
     }
 
     // Update is called once per frame

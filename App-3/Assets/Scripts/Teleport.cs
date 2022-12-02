@@ -55,6 +55,10 @@ public class Teleport : MonoBehaviour
                 {
                     SceneManager.LoadScene("WaterLevel");
                 }
+                if(gameObject.CompareTag("boss"))
+                {
+                    SceneManager.LoadScene("BossLevel");
+                }
             }
         }
         else

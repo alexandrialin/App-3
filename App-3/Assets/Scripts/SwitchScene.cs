@@ -16,6 +16,31 @@ public class SwitchScene : MonoBehaviour
     {
         
     }
+    public void DestroyMenu()
+    {
+        Destroy(gameObject);
+    }
+    public void HubWorld()
+    {
+        SceneManager.LoadScene("HubWorld");
+    }
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Prologue");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        GameProgression.ResetEarth();
+        GameProgression.ResetFire();
+        Inventory.ResetStats();
+
+    }
     public void Switch()
     {
         OverallHP.hp = OverallHP.full;
@@ -62,11 +87,7 @@ public class SwitchScene : MonoBehaviour
         {
             if (GameProgression.fireComplete == false)
             {
-                GameProgression.hasKey = false;
-                GameProgression.hasChest = false;
-                GameProgression.numTorches = 0;
-                GameProgression.fireballs = 0;
-                GameProgression.iceMelt = false;
+                GameProgression.ResetFire();
             }
         }
         if (gameObject.CompareTag("water"))
@@ -79,10 +100,7 @@ public class SwitchScene : MonoBehaviour
         }
         if (gameObject.CompareTag("earth"))
         {
-            EarthProgression.birdsKilled = 0;
-            EarthProgression.plantWatered = false;
-            EarthProgression.hasPlant = false;
-            EarthProgression.hasOrb = false;
+            GameProgression.ResetEarth();
         }
     }
 }

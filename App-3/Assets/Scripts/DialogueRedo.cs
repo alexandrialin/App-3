@@ -71,6 +71,10 @@ public class DialogueRedo : MonoBehaviour
         {
             SceneManager.LoadScene("HubWorld");
         }
+        if(gameObject.CompareTag("end") && index == 5)
+        {
+            SceneManager.LoadScene("Menu");
+        }
             continueButton.SetActive(false);
         if (index < sentences.Length - 1)
         {
