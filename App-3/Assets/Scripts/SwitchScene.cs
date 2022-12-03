@@ -39,6 +39,7 @@ public class SwitchScene : MonoBehaviour
         GameProgression.ResetEarth();
         GameProgression.ResetFire();
         Inventory.ResetStats();
+        OverallHP.ResetHP();
 
     }
     public void Switch()

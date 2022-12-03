@@ -47,11 +47,21 @@ public class McHp : MonoBehaviour
             {
                 print("working");
                 OverallHP.hp = 0;
+                if (squealCooldown <= 0)
+                {
+                    Instantiate(squeal);
+                }
+                squealCooldown = 1f;
 
             }
             if (collision.gameObject.CompareTag("boss"))
             {
                 OverallHP.hp -= Random.Range(10, 30);
+                if (squealCooldown <= 0)
+                {
+                    Instantiate(squeal);
+                }
+                squealCooldown = 1f;
             }
             if(collision.gameObject.CompareTag("cutscene"))
             {

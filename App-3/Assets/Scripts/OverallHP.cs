@@ -29,4 +29,9 @@ public class OverallHP : MonoBehaviour
     {
         full += 50;
     }
+    public static void ResetHP()
+    {
+        full = 200;
+        hp = 200;
+    }
 }

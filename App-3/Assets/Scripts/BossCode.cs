@@ -302,8 +302,9 @@ public class BossCode : MonoBehaviour
             {
                 if(enemyType == "blue" && Inventory.hasIce || enemyType == "teal" && Inventory.hasWater || enemyType == "orange" && Inventory.hasFire || enemyType == "green" && Inventory.hasEarth )
                 {
-                    shieldText.text = shield - 10 * dmg + "/1000";
-                    shield -= 10 * dmg;
+                    dmg = dmg * 10;
+                    shieldText.text = shield - dmg + "/1000";
+                    shield -= dmg;
                 }
                 else
                 {

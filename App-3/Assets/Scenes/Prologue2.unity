@@ -733,6 +733,7 @@ MonoBehaviour:
   FirePoint: {fileID: 1613656271}
   cooldown: 0
   lag: 0
+  cdText: {fileID: 0}
 --- !u!95 &421956055
 Animator:
   serializedVersion: 4
@@ -797,6 +798,7 @@ MonoBehaviour:
   FirePoint: {fileID: 2017893678}
   cooldown: 0
   lag: 0
+  cdText: {fileID: 0}
 --- !u!95 &463976770
 Animator:
   serializedVersion: 4
@@ -1569,6 +1571,63 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3637813169649626325, guid: f1297723157fc7f48a9115d4cd5fd959, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1297723157fc7f48a9115d4cd5fd959, type: 3}
+--- !u!1001 &866690713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9184832100672241974, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_Name
+      value: PauseObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 394.58096
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 83.496254
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 111.854126
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184832100672241976, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1346ca12354b8a74d864ef33993179ee, type: 3}
 --- !u!1 &949606894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3637813169649626326, guid: f1297723157fc7f48a9115d4cd5fd959, type: 3}
@@ -1786,6 +1845,7 @@ MonoBehaviour:
   FirePoint: {fileID: 701996611}
   cooldown: 0
   lag: 0
+  cdText: {fileID: 0}
 --- !u!95 &1038990261
 Animator:
   serializedVersion: 4
@@ -2462,6 +2522,7 @@ MonoBehaviour:
   FirePoint: {fileID: 281396078}
   cooldown: 0
   lag: 0
+  cdText: {fileID: 0}
 --- !u!95 &1833190508
 Animator:
   serializedVersion: 4

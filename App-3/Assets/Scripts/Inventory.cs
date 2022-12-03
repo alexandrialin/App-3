@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
 
-    public static int money = 0;
+    public static int money = 100;
     public static bool hasFire;
     public static bool hasIce;
     public static bool hasWater; 
